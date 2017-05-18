@@ -10,6 +10,7 @@ import _ from 'lodash';
 import vsource from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import gulpif from 'gulp-if';
+import exit from 'gulp-exit';
 
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   let dirs = config.directories;
@@ -69,7 +70,8 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
               + ' was browserified: '
               + plugins.util.colors.magenta(time + 's'));
             return browserSync.reload('*.js');
-          });
+          })
+          .pipe(exit());
       };
 
       if (!args.production) {
