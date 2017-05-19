@@ -28,6 +28,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
     "imagemin-pngquant": "^5.0.0",
     "jeet": "^7.1.0",
     "multi-glob": "^1.0.1",
