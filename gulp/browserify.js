@@ -70,12 +70,8 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
               + ' was browserified: '
               + plugins.util.colors.magenta(time + 's'));
             return browserSync.reload('*.js');
-          });
-
-          if (!args.exit) {
-            bundler.pipe(exit());
-          }
-
+          })
+          .pipe(gulpif(args.exit === true, exit()));
       };
 
       if (!args.production) {
