@@ -41,7 +41,9 @@
     "watchify": "^3.9.0",
     "wrench": "^1.5.9"
   },
-  "scripts": {},
+  "scripts": {
+   "gulp": "gulp"  
+  },
   "author": "",
   "license": "ISC",
   "//": "CUSTOM CONFIGURATION",
