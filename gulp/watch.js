@@ -9,14 +9,20 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   gulp.task('watch', () => {
 
     if (!args.production) {
-      gulp.watch([
+
+      gulp.src([
+        path.join(dirs.source, dirs.styles, '**/*.styl')
+      ])
+      .pipe(plugins.watch([
         path.join(dirs.source, dirs.styles, '**/*.styl'),
         path.join(dirs.source, dirs.components, '**/*.styl'),
         path.join(dirs.source, dirs.modules, '**/*.styl'),
         path.join(dirs.source, dirs.organisms, '**/*.styl'),
         path.join(dirs.source, dirs.templates, '**/*.styl'),
         path.join(dirs.source, dirs.pages, '**/*.styl'),
-      ], ['stylus']);
+      ], function() {
+        gulp.start('stylus');
+      }));
 
       // Images
       gulp.watch([

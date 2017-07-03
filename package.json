@@ -29,8 +29,10 @@
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
     "imagemin-pngquant": "^5.0.0",
     "jeet": "^7.1.0",
+    "jquery": "^3.2.1",
     "multi-glob": "^1.0.1",
     "nib": "^1.1.2",
     "phantomjs": "^2.1.7",
@@ -42,7 +44,7 @@
     "wrench": "^1.5.9"
   },
   "scripts": {
-   "gulp": "gulp"  
+    "gulp": "gulp"
   },
   "author": "",
   "license": "ISC",

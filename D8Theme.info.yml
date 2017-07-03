@@ -9,6 +9,9 @@ base theme: classy
 libraries:
   - D8Theme/global
 
+libraries-override:
+  classy/base: false
+
 stylesheets-remove:
 
 regions:
